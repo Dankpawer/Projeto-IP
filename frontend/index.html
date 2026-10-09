@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAN - Digital Awareness Network</title>
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+    <div id="app-container">
+        <header>
+            <h1>DAN <span class="cursor">_</span></h1>
+            <p>Digital Awareness Network</p>
+        </header>
+
+        <main>
+            <!-- Consent View -->
+            <section id="consent-view" class="view active">
+                <h2>[ Aviso de Consentimento ]</h2>
+                <p>Esta é uma aplicação educativa sobre OSINT (Open Source Intelligence) e exposição digital.</p>
+                <p>Para uma experiência completa, podemos realizar uma simulação de busca do seu IP para demonstrar como dados públicos funcionam. <strong>Nenhum dado é salvo no banco de dados.</strong></p>
+                
+                <div class="actions">
+                    <button id="btn-accept" class="btn primary">Aceitar Consulta Externa (Simulação)</button>
+                    <button id="btn-decline" class="btn secondary">Continuar sem Consulta de IP</button>
+                </div>
+            </section>
+
+            <!-- Dashboard View -->
+            <section id="dashboard-view" class="view hidden">
+                <h2>[ Painel de Resultados ]</h2>
+                
+                <div id="ip-results" class="panel hidden">
+                    <h3>> Resultado da Geolocalização (Simulado)</h3>
+                    <pre id="ip-data">Carregando...</pre>
+                </div>
+
+                <div id="scenario-results" class="panel">
+                    <h3>> Cenário Fictício (OSINT)</h3>
+                    <pre id="scenario-data">Carregando...</pre>
+                </div>
+
+                <button id="btn-reset" class="btn danger">Limpar Dados e Voltar</button>
+            </section>
+        </main>
+    </div>
+    <script src="src/js/api.js"></script>
+    <script src="src/js/main.js"></script>
+</body>
+</html>
